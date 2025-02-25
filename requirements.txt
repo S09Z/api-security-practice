@@ -1,9 +1,19 @@
-Flask==3.0.0                # Lightweight web framework for API
+# 🚀 Web Framework & Server
+fastapi==0.109.0           # FastAPI - Web Framework
+uvicorn==0.27.0            # ASGI Server for running FastAPI
+gunicorn==21.2.0           # Production-ready WSGI server (for deployment)
+
+# 🔹 Authentication & Security
 bcrypt==4.0.1               # Secure password hashing (bcrypt)
 argon2-cffi==21.3.0         # Argon2 password hashing (recommended)
 pyjwt==2.8.0                # JWT authentication handling
 cryptography==42.0.0        # Cryptographic functions (AES, RSA)
 pyotp==2.9.0                # Two-Factor Authentication (2FA)
-requests==2.31.0            # HTTP requests for checking password leaks
 python-dotenv==1.0.1        # Environment variable management
-gunicorn==21.2.0            # Production-ready WSGI server (for deployment)
+
+# 🔹 API Security & Rate Limiting
+slowapi==0.1.8              # Rate Limiting Middleware for FastAPI (Prevent DDoS & Brute Force)
+requests==2.31.0            # HTTP requests for checking password leaks
+
+# 🔹 Reverse Proxy Security (NGINX Support)
+httptools==0.6.1            # HTTP parsing library for performance improvement

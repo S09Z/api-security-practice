@@ -28,3 +28,6 @@ This repository contains **API Security Best Practices**, focusing on **Authenti
 ```bash
 git clone https://github.com/S09Z/api-security-practice.git
 cd api-security-best-practices
+
+pip install -r requirements.txt
+```
