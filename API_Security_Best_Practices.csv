@@ -1,0 +1,21 @@
+Category,Best Practice,Purpose,Implementation
+Authentication,Max Retry/Jail in Login,Prevent brute force attacks by limiting failed login attempts,Lock user account or IP after a certain number of failed attempts
+Authentication,Use Standard Authentication Mechanisms,Ensure authentication follows secure industry standards,"Use OAuth, OpenID Connect, SAML, and password hashing best practices"
+Authentication,Prevent Rainbow Table Attacks,Protect against precomputed hash attacks,"Use bcrypt, Argon2, or PBKDF2 instead of raw hash functions"
+Authentication,Use Secure Password Hashing,Securely store user passwords to prevent breaches,Use bcrypt or Argon2 with a strong work factor
+Authentication,Implement Two-Factor Authentication (2FA),Enhance authentication security with multi-step verification,Use TOTP or WebAuthn-based multi-factor authentication
+JWT Security,Use Strong JWT Secret,Prevent token tampering and brute-force guessing,"Use a long, randomly generated secret stored securely"
+JWT Security,Set Token Expiry,Reduce attack window by limiting token lifespan,"Set short token expiry (e.g., 15 minutes for access tokens)"
+JWT Security,Avoid Storing Sensitive Data in JWT,Prevent data leakage in case of token exposure,Store only non-sensitive metadata in JWT
+JWT Security,Keep JWT Payload Small,Reduce network overhead and prevent token abuse,Minimize claims and avoid excessive data in the JWT payload
+JWT Security,Securely Store & Rotate Refresh Tokens,Prevent token theft and replay attacks,Store refresh tokens in HttpOnly secure cookies and rotate them on use
+Access Control,Throttle Requests,Prevent DDoS & Brute Force Attacks,Use SlowAPI to limit request rate
+Access Control,Use HTTPS,Prevent MITM Attacks & Data Interception,Use SSL/TLS and enforce HTTPS redirection
+Access Control,Use HSTS Header,Prevent SSL Strip Attacks by enforcing HTTPS,Set `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`
+Access Control,Disable Directory Listings,Prevent exposure of sensitive server files,Disable `autoindex` in NGINX
+Access Control,Restrict Private APIs,Restrict private APIs to safe-listed IPs to prevent unauthorized access,Allowlist only trusted IPs using FastAPI Middleware or NGINX
+OAuth Security,Validate Redirect URI,Prevent Open Redirect Attacks,Check `redirect_uri` against a predefined allowlist
+OAuth Security,Avoid Implicit Grant Flow,Prevent Token Leak in URL Fragment,Use Authorization Code Grant instead of Implicit Grant
+OAuth Security,Use State Parameter,Prevent CSRF Attacks,Use `state` parameter in OAuth flow and verify its integrity
+OAuth Security,Validate Scope,Prevent Over-privileged Requests,Validate requested scope against an allowlist
+OAuth Security,Use Short-Lived Tokens,Reduce risk of token theft by using refresh tokens,Use short-lived access tokens with refresh token rotation
