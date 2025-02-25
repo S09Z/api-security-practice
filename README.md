@@ -14,13 +14,16 @@ This repository contains **API Security Best Practices**, focusing on **Authenti
 ✅ **API security best practices** in a real-world example  
 
 ## 📂 Project Structure
-📦 api-security-best-practices
-┣ 📜 LICENSE
-┣ 📜 README.md
-┣ 📜 requirements.txt
-┣ 📂 tests/
-┣ 📂 tools/
-┗ 📂 script/
+```plaintext
+📦 api-security-best-practices  
+┣ 📜 LICENSE  
+┣ 📜 README.md  
+┣ 📜 main.py  
+┣ 📜 requirements.txt  
+┣ 📂 tests/  
+┣ 📂 tools/  
+┣ 📂 script/  
+```
 
 
 ## 🛠 Installation & Setup
